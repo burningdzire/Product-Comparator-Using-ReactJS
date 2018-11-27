@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-const Compare = ({products}) =>
-  <div className="row compare">
-    <div className="col-12 mt-5 text-center">
+const Compare = ({ products }) =>
+  <div className="row">
+    <div className="col-md-8 text-center">
       <table className="table">
         <thead className="thead-default">
           <tr>
@@ -22,20 +22,10 @@ const Compare = ({products}) =>
               <td key={product.id} className="text-center">{product.price}</td>
             )}
           </tr>
-          <tr className="colors">
-            <th scope="row">Colors</th>
-            {products.map(product =>
-              <td key={product.id}>
-                {product.colors.map((color, index) =>
-                  <span key={index} className={"bg-" + color} />
-                )}
-              </td>
-            )}
-          </tr>
           <tr className="condition">
             <th scope="row">Condition</th>
             {products.map(product =>
-              <td key={product.id} className={product.condition === "Frozen" ? "bg-red" : "bg-green"}>
+              <td key={product.id}>
                 {product.condition}
               </td>
             )}

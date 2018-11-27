@@ -1,4 +1,4 @@
-import * as types from '../../constants/types'
+// import * as types from '../../constants/types'
 
 const INITIAL_STATE = {
   products: []
@@ -6,13 +6,13 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    case types.FETCH_PRODUCTS:
+    case "FETCH_PRODUCTS_LIST":
       return {
         ...state, products: action.payload.map(product =>
           ({...product, compare: false})
         )
       };
-    case types.COMPARE_PRODUCT:
+    case "COMPARE_PRODUCTS":
       return {
         ...state, products: state.products.map(product =>
           product.id === action.product.id ?
