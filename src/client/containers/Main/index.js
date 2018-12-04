@@ -23,7 +23,7 @@ class Main extends Component {
         </div>
         <hr />
         <ProductList products={products} compare={actions.compare} />
-        {compareProducts.length >= 2 && <Compare products={compareProducts} />}
+        {compareProducts.length >= 1 && <Compare products={compareProducts} />}
       </div>
     )
   }
